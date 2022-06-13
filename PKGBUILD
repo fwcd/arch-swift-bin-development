@@ -16,7 +16,7 @@ makedepends=('patchelf')
 options=('!strip')
 provides=('swift-language')
 replaces=('swift-language-bin')
-source=("https://swift.org/builds/swift-5.6-branch/centos8/swift-${vendorver}/swift-${vendorver}-centos8.tar.gz")
+source=("https://download.swift.org/development/centos8/swift-${vendorver}/swift-${vendorver}-centos8.tar.gz")
 sha256sums=('SKIP')
 
 package() {
