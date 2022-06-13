@@ -3,8 +3,9 @@
 # Contributor: Frederic Bezies <fredbezies at gmail dot com>, youngunix <>
 
 pkgname=swift-bin-development
-pkgver=5.6.DEVELOPMENT
-vendorver=5.6-DEVELOPMENT-SNAPSHOT-2022-06-08-a
+pkgver=DEVELOPMENT
+vendorver=DEVELOPMENT-SNAPSHOT-2022-06-08-a
+_centosver=centos7
 pkgrel=1
 pkgdesc="Binary builds of the Swift programming language (dev snapshot)"
 arch=('x86_64')
@@ -16,7 +17,7 @@ makedepends=('patchelf')
 options=('!strip')
 provides=('swift-language')
 replaces=('swift-language-bin')
-source=("https://download.swift.org/development/centos8/swift-${vendorver}/swift-${vendorver}-centos8.tar.gz")
+source=("https://download.swift.org/development/${_centosver}/swift-${vendorver}/swift-${vendorver}-${_centosver}.tar.gz")
 sha256sums=('SKIP')
 
 package() {
@@ -29,7 +30,7 @@ package() {
   }
 
   mkdir -p "${pkgdir}/usr/lib/swift"
-  cp -Ppr "${srcdir}/swift-$vendorver-centos8"/usr/* "${pkgdir}/usr/lib/swift"
+  cp -Ppr "${srcdir}/swift-$vendorver-$_centosver"/usr/* "${pkgdir}/usr/lib/swift"
 
   # Symlink the desired binaries to /usr/bin
   mkdir -p "${pkgdir}/usr/bin"
