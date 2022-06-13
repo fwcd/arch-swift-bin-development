@@ -41,8 +41,9 @@ package() {
   # Patch the binaries to use the changed ncurses names
   patchelf=(patchelf)
   for lib in ncurses panel form; do
-    patchelf+=(--replace-needed "lib${lib}.so.6" "lib${lib}w.so")
+    patchelf+=(--replace-needed "lib${lib}.so.5" "lib${lib}w.so")
   done
+  patchelf+=(--replace-needed "libtinfo.so.5" "libncursesw.so")
   find_elf_only -exec "${patchelf[@]}" {} \;
 
   install -dm755 "${pkgdir}/etc/ld.so.conf.d"
