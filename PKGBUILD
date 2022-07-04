@@ -4,7 +4,7 @@
 
 pkgname=swift-bin-development
 pkgver=DEVELOPMENT
-vendorver=DEVELOPMENT-SNAPSHOT-2022-06-08-a
+vendorver=DEVELOPMENT-SNAPSHOT-2022-06-26-a
 _centosver=centos7
 pkgrel=1
 pkgdesc="Binary builds of the Swift programming language (dev snapshot)"

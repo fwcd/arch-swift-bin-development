@@ -12,7 +12,7 @@ pkgbase = swift-bin-development
 	provides = swift-language
 	replaces = swift-language-bin
 	options = !strip
-	source = https://download.swift.org/development/centos7/swift-DEVELOPMENT-SNAPSHOT-2022-06-08-a/swift-DEVELOPMENT-SNAPSHOT-2022-06-08-a-centos7.tar.gz
+	source = https://download.swift.org/development/centos7/swift-DEVELOPMENT-SNAPSHOT-2022-06-26-a/swift-DEVELOPMENT-SNAPSHOT-2022-06-26-a-centos7.tar.gz
 	sha256sums = SKIP
 
 pkgname = swift-bin-development
